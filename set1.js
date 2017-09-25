@@ -73,3 +73,20 @@
 //     return console.error;
 // }
 //8
+function yearOfBirth(age) {
+  return 2017 - age;
+}
+let whoAmI = function(name, age){
+  try {
+    if (typeof name !== 'string' || typeof age !== 'number'){
+      throw new Error('Argument not valid');
+    }
+    const yob = yearOfBirth(age);
+    console.log(`Hi, my name is ${name} and I'm ${age} years old`);
+    console.log(`I was born in ${yob}`);
+  }
+  catch (e){
+    console.log(e);
+  }
+};
+whoAmI('jesse', 89);
